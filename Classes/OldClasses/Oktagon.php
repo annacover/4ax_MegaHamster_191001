@@ -1,4 +1,5 @@
 <?php
+namespace Annacover\Megahamster\OldClasses;
 require_once 'Room.php';
 
 class Oktagon extends room

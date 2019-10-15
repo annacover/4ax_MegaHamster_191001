@@ -1,5 +1,5 @@
 <?php
-
+namespace Annacover\Megahamster\AbstractClasses;
 
 class SquareFromAbstract extends AbstractRoom
 {

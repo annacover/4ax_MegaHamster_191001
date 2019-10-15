@@ -1,0 +1,17 @@
+{
+    "name": "annacover/megahamster",
+    "description": "Megahamster autoloading implementieren",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Anna Schwabegger",
+            "email": "anna.schwabegger@htl.rennweg.at"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Annacover\\Megahamster\\": "Classes/"
+        }
+    },
+    "require": {}
+}

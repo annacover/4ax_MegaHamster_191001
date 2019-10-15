@@ -1,5 +1,5 @@
 <?php
-
+namespace Annacover\Megahamster\OldClasses;
 class Room
 {
     protected $name;

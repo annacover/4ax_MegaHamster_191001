@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <?php
-//require 'classes/Room.php';
-//require 'classes/Oktagon.php';
-//require 'classes/Square.php';
-require 'classes/AbstractRoom.php';
-require 'classes/OktagonFromAbstract.php';
-require 'classes/SquareFromAbstract.php';
+//require 'Classes/Room.php';
+//require 'Classes/Oktagon.php';
+//require 'Classes/Square.php';
+require 'vendor/autoload.php';
+
+use Annacover\Megahamster\AbstractClasses as AbstractClasses;
 ?>
 <html lang="de">
 <head>
@@ -35,9 +35,9 @@ require 'classes/SquareFromAbstract.php';
     }
     */
     $products_array_abstract =[
-        $room = new SquareFromAbstract('The Room', 49.00, 'none', 80,50,50),
-        $flat = new SquareFromAbstract('The Flat', 149.00, 'Food jars', 120,80,80),
-        $pit  = new OktagonFromAbstract('The Pit', 69.00, ' Handschuhe <br> Boxsack', 20)];
+        $room = new AbstractClasses\SquareFromAbstract('The Room', 49.00, 'none', 80,50,50),
+        $flat = new AbstractClasses\SquareFromAbstract('The Flat', 149.00, 'Food jars', 120,80,80),
+        $pit  = new AbstractClasses\OktagonFromAbstract('The Pit', 69.00, ' Handschuhe <br> Boxsack', 20)];
     foreach ($products_array_abstract as $product){
         echo $product->toHTML();
     }
