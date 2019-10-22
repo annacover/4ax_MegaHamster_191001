@@ -17,7 +17,7 @@ abstract class AbstractRoom
     /**
      * @return string
      */
-    public function getName()
+    public function getName() : string
     {
         return $this->name;
     }
@@ -33,7 +33,7 @@ abstract class AbstractRoom
     /**
      * @return float
      */
-    public function getPrice()
+    public function getPrice() : float
     {
         return $this->price;
     }
