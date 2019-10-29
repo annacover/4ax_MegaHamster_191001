@@ -1,7 +1,7 @@
 <?php
 namespace Annacover\Megahamster\AbstractClasses;
 
-class SquareFromAbstract extends AbstractRoom
+class SquareFromAbstract extends AbstractRoom implements \JsonSerializable
 {
     protected $length;
     protected $width;
@@ -48,6 +48,10 @@ class SquareFromAbstract extends AbstractRoom
         return $this->width * $this->length;
     }
 
+    public function getSize(){
+        return $this->getArea() * $this->height;
+    }
+
     public function toHTML()
     {
         $name = $this->getName();
@@ -69,4 +73,21 @@ ENDE;
     }
 
 
+    /**
+     * Specify data which should be serialized to JSON
+     * @link https://php.net/manual/en/jsonserializable.jsonserialize.php
+     * @return mixed data which can be serialized by <b>json_encode</b>,
+     * which is a value of any type other than a resource.
+     * @since 5.4.0
+     */
+    public function jsonSerialize()
+    {
+        $r = ['name' => $this->getName(),
+            'price' => $this->getPrice(),
+            'equipment' => $this->getEquipment(),
+            'area' => $this->getArea(),
+            'size' => $this->getSize()
+            ];
+        return $r;
+    }
 }
